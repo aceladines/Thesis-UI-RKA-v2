@@ -8,7 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 const extractTextFromPdf = async (file: Blob): Promise<string | Error> => {
   try {
     const url = URL.createObjectURL(file);
-    const loadingTask = pdfjs.getDocument(url);
+    const loadingTask = pdfjs.getDocument({ url, verbosity: 0 });
 
     const pdf = await loadingTask.promise;
 
