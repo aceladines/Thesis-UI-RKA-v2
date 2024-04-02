@@ -5,7 +5,9 @@ const nextConfig = {
     return config;
   },
   env: {
-    API_URL: process.env.API_URL,
+    API_URL_BASE: process.env.API_URL_BASE,
+    API_ENHANCED_RKA_ENDPOINT_URL: process.env.API_ENHANCED_RKA_ENDPOINT_URL,
+    API_NAIVE_RKA_ENDPOINT_URL: process.env.API_NAIVE_RKA_ENDPOINT_URL,
   },
 };
 
