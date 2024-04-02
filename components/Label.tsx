@@ -1,8 +1,15 @@
-export default function Label(
-  _props: Readonly<{ htmlFor: string; children: React.ReactNode }>
-) {
+type LabelProps = {
+  htmlFor: string;
+  styles?: string;
+  children: React.ReactNode;
+};
+
+export default function Label(_props: Readonly<LabelProps>) {
   return (
-    <label className="lg:text-lg font-semibold " htmlFor={_props.htmlFor}>
+    <label
+      className={`font-semibold ${_props.styles}`}
+      htmlFor={_props.htmlFor}
+    >
       {_props.children}
     </label>
   );
